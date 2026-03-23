@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://alyssaclark.org">
   <meta property="og:image" content="https://alyssaclark.org/images/og-image.jpg">
 
-  <!-- Favicon (replace with your own) -->
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
 
   <link rel="stylesheet" href="styles.css">
@@ -30,10 +30,10 @@
       <a href="index.html" class="logo">Alyssa Clark</a>
       <nav>
         <ul class="site-nav">
-          <li><a href="#services">Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="mailto:me@alyssaclark.org">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -43,18 +43,12 @@
   <main>
 
     <!-- ============================================
-         HERO — PHOTO + BIO
+         HERO — BIG TEXT + SMALL PHOTO
          Edit the text below to update your intro.
          ============================================ -->
     <section class="hero">
       <div class="container">
         <div class="hero-inner">
-
-          <div class="hero-photo">
-            <!-- Replace the placeholder below with:
-                 <img src="images/headshot.jpg" alt="Alyssa Clark"> -->
-            <span class="placeholder-smiley" aria-hidden="true">&#x263A;</span>
-          </div>
 
           <div class="hero-text">
             <h1>Alyssa Clark</h1>
@@ -63,71 +57,95 @@
             <!-- EDIT YOUR BIO HERE -->
             <div class="bio">
               <p>I'm an impact consultant with seven years of experience in measurement and evaluation, strategic consulting, and cross-sector facilitation. I've designed 25+ measurement frameworks, led multi-year strategic planning processes, and built data systems that help organisations make better decisions.</p>
-              <p>My work sits at the intersection of rigorous analysis and relational trust — I'm as comfortable building a Salesforce database as I am facilitating a room full of stakeholders toward shared goals. I hold an MSc in Human Rights from LSE, an MPA from Brigham Young University, and I'm based in London.</p>
+              <p>My work sits at the intersection of rigorous analysis and relational trust — I'm as comfortable building a Salesforce database as I am facilitating a room full of stakeholders toward shared goals.</p>
             </div>
 
             <div class="hero-ctas">
               <a href="mailto:me@alyssaclark.org" class="btn btn-primary">Get in touch</a>
               <a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
-              <a href="files/alyssa-clark-cv.pdf" class="btn btn-outline btn-small" download>Download CV</a>
+              <a href="files/alyssa-clark-cv.pdf" class="btn btn-outline btn-small" download>Download CV ↓</a>
             </div>
           </div>
 
+          <div class="hero-photo">
+            <!-- Replace the placeholder below with:
+                 <img src="images/headshot.jpg" alt="Alyssa Clark"> -->
+            <span class="placeholder-smiley" aria-hidden="true">&#x263A;</span>
+          </div>
+
+        </div>
+
+        <div class="scroll-cue">
+          <span class="arrow">↓</span> See what I do
         </div>
       </div>
     </section>
 
 
     <!-- ============================================
-         SERVICES
-         Edit the card titles and bullet points below.
+         SERVICES SUMMARY
+         Brief overview — full detail on services.html
          ============================================ -->
-    <section id="services" class="fade-in">
+    <section id="services" class="services-summary fade-in">
       <div class="container">
         <h2 class="section-heading">Services</h2>
+        <p class="section-subheading">How I work with organisations driving social impact.</p>
 
         <div class="services-grid">
 
-          <!-- Card 1: Measurement & Evaluation -->
           <div class="service-card">
+            <span class="card-label">01</span>
             <h3>Measurement &amp; Evaluation</h3>
-            <ul>
-              <li>Design of theory of change, logic models, and results frameworks</li>
-              <li>Quantitative and qualitative data collection and analysis</li>
-              <li>Equity-centred evaluation design focused on structural disparities</li>
-              <li>Data system design and implementation (including Salesforce)</li>
-              <li>Impact reporting and stakeholder communication</li>
-            </ul>
+            <p>Theory of change, results frameworks, data systems, and equity-centred evaluation design. Helping organisations understand what's working and why.</p>
           </div>
 
-          <!-- Card 2: Strategy & Programme Design -->
           <div class="service-card">
+            <span class="card-label">02</span>
             <h3>Strategy &amp; Programme Design</h3>
-            <ul>
-              <li>Multi-year strategic planning and facilitation</li>
-              <li>Stakeholder alignment across departments and partnerships</li>
-              <li>Governance and organisational design processes</li>
-              <li>Collective impact strategy and backbone support</li>
-              <li>Workshop and training design and delivery</li>
-            </ul>
+            <p>Strategic planning, stakeholder alignment, governance design, and collective impact strategy. Moving groups from complexity to clarity.</p>
           </div>
 
-          <!-- Card 3: Research -->
           <div class="service-card">
+            <span class="card-label">03</span>
             <h3>Research</h3>
-            <ul>
-              <li>Applied research on social impact, human rights, and equity</li>
-              <li>Survey and focus group design and administration</li>
-              <li>Literature reviews and landscape analyses</li>
-              <li>Data visualisation and presentation for diverse audiences</li>
-              <li>Sector publications and conference presentations</li>
+            <p>Applied research, survey and focus group design, landscape analyses, and data visualisation. Rigorous evidence for diverse audiences.</p>
+          </div>
+
+        </div>
+
+        <div class="services-cta">
+          <a href="services.html" class="link-arrow">View full services <span class="arr">→</span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         ABOUT & CONTACT
+         ============================================ -->
+    <section id="contact" class="about-contact fade-in">
+      <div class="container">
+        <h2 class="section-heading">About</h2>
+
+        <div class="about-inner">
+
+          <div class="about-text">
+            <p>I hold an MSc in Human Rights from LSE and an MPA from Brigham Young University. Before consulting independently, I led data strategy at Promise Partnership Utah — a cradle-to-career collective impact partnership — and delivered concurrent client engagements at Cicero Group, a boutique strategy consultancy.</p>
+            <p>I've presented at national conferences, contributed to sector publications, and built networks across the collective impact and racial equity fields. I'm based in London and available for project-based and ongoing engagements.</p>
+          </div>
+
+          <div class="contact-block">
+            <h3>Get in touch</h3>
+            <ul class="contact-list">
+              <li><a href="mailto:me@alyssaclark.org">me@alyssaclark.org</a></li>
+              <li><a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="files/alyssa-clark-cv.pdf" download>Download CV ↓</a></li>
             </ul>
           </div>
 
         </div>
       </div>
     </section>
-
 
   </main>
 
@@ -146,7 +164,7 @@
   </footer>
 
 
-  <!-- Scroll-reveal animation (lightweight, no library) -->
+  <!-- Scroll-reveal animation -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const els = document.querySelectorAll('.fade-in');
