@@ -1,40 +1,34 @@
-# Alyssa Clark — Personal Website
+# alyssaclark.org
 
-Static personal site hosted on GitHub Pages at [alyssaclark.org](https://alyssaclark.org).
+Personal website for Alyssa Clark, impact consultant based in London.
 
-## How it works
+**Live at [alyssaclark.org](https://alyssaclark.org)**
 
-- **`index.html`** — page structure and content (all the text lives here)
-- **`styles.css`** — all styling, with colour variables at the top
-- **`fonts/`** — self-hosted web fonts (no external requests)
-- **`images/`** — your headshot and any other images
-- **`files/`** — downloadable files (CV PDF, etc.)
+Plain HTML and CSS. No build step, no frameworks, no dependencies. Self-hosted fonts (GDPR-safe). Hosted on GitHub Pages.
 
-## Common tasks
+## Stack
 
-### Update text content
+- Static HTML/CSS
+- DM Serif Display + DM Sans (self-hosted)
+- GitHub Pages + custom domain
 
-Open `index.html` and edit the text directly. Each section has an HTML comment like `<!-- EDIT YOUR BIO HERE -->` to help you find what to change. Use Claude Code if unsure.
+## Structure
 
-### Add your photo
+```
+index.html          Homepage: hero, services overview, about/contact
+services.html       Full service details
+projects.html       Project grid
+projects/*.html     Individual project pages
+styles.css          All styling (colour variables at top)
+fonts/              Self-hosted web fonts
+```
 
-1. Add your image to the `images/` folder (e.g., `images/headshot.jpg`)
-2. In `index.html`, find the hero section and replace the smiley placeholder with:
-   ```html
-   <img src="images/headshot.jpg" alt="Alyssa Clark">
-   ```
+## Editing
 
-### Add your CV
+All content lives directly in the HTML files. Look for comments like `<!-- EDIT YOUR BIO HERE -->`.
 
-1. Add your CV PDF to a `files/` folder (e.g., `files/alyssa-clark-cv.pdf`)
-2. The download button in the hero already links to this path
+To retheme, edit the CSS custom properties at the top of `styles.css`.
 
-### Change colours
+## License
 
-Edit the CSS variables at the top of `styles.css` — the `--color-accent` variable controls the sage green used throughout.
-
-### Deploy
-
-GitHub Pages: repo **Settings → Pages → Source: `main`, folder: `/ (root)`**.
-
-The `CNAME` file is already set to `alyssaclark.org`. You'll need to configure DNS with your domain registrar to point to GitHub Pages — see [GitHub's guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-github-pages).
+Content is copyrighted. Code structure is free to reuse.
