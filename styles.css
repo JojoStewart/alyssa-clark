@@ -5,15 +5,15 @@
 
 :root {
   --color-bg:           #FFFFFF;
-  --color-surface:      #F5F4F0;
-  --color-text:         #232220;
-  --color-heading:      #111111;
-  --color-muted:        #6B6B6B;
+  --color-surface:      #F3F3EC;
+  --color-text:         #2A3025;
+  --color-heading:      #1C2418;
+  --color-muted:        #6B6E63;
   --color-accent:       #EEFF88;
-  --color-accent-dim:   #D6E670;
-  --color-dark:         #1A1A1A;
-  --color-border:       #E2E0DB;
-  --color-warm:         #F9F7F2;
+  --color-accent-dim:   #B8C853;
+  --color-dark:         #1C2418;
+  --color-border:       #DDDCD4;
+  --color-warm:         #EEEDDF;
 }
 
 /* — Fonts (self-hosted, GDPR-safe) — */
@@ -92,10 +92,7 @@ section {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-dark);
 }
 
 .site-header .container {
@@ -108,7 +105,7 @@ section {
 .site-header .logo {
   font-family: 'DM Serif Display', serif;
   font-size: 1.15rem;
-  color: var(--color-heading);
+  color: var(--color-accent);
   letter-spacing: -0.01em;
 }
 
@@ -121,14 +118,14 @@ section {
 .site-nav a {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.01em;
   transition: color 0.2s;
 }
 
 .site-nav a:hover,
 .site-nav a.active {
-  color: var(--color-heading);
+  color: #fff;
 }
 
 /* — Hero — */
@@ -311,7 +308,7 @@ section {
 }
 
 .services-summary .section-subheading {
-  color: rgba(17, 17, 17, 0.55);
+  color: rgba(28, 36, 24, 0.55);
 }
 
 .services-grid {
@@ -331,8 +328,21 @@ section {
 }
 
 .service-card:hover {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  background: var(--color-dark);
+  box-shadow: 0 4px 24px rgba(28, 36, 24, 0.15);
+}
+
+.service-card:hover .card-number {
+  color: var(--color-accent);
+  opacity: 0.3;
+}
+
+.service-card:hover h3 {
+  color: #fff;
+}
+
+.service-card:hover p {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .service-card .card-number {
@@ -376,7 +386,11 @@ section {
 
 .link-arrow:hover {
   gap: 0.65rem;
-  color: var(--color-heading);
+  color: var(--color-dark);
+}
+
+.link-arrow:hover .arr {
+  color: var(--color-accent-dim);
 }
 
 /* — Services detail page — */
@@ -439,7 +453,12 @@ section {
 /* — About / Contact section — */
 
 .about-contact {
-  background: var(--color-warm);
+  background: var(--color-dark);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.about-contact .section-heading {
+  color: #fff;
 }
 
 .about-inner {
@@ -453,12 +472,13 @@ section {
   margin-bottom: 0.85rem;
   line-height: 1.7;
   font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .contact-block h3 {
   font-family: 'DM Serif Display', serif;
   font-size: 1.4rem;
-  color: var(--color-heading);
+  color: var(--color-accent);
   margin-bottom: 1.25rem;
 }
 
@@ -472,15 +492,15 @@ section {
 }
 
 .contact-list a {
-  color: var(--color-text);
-  border-bottom: 1.5px solid var(--color-border);
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 2px;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .contact-list a:hover {
-  border-color: var(--color-accent-dim);
-  color: var(--color-heading);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 /* — Projects page — */
@@ -508,15 +528,34 @@ a.project-card {
   border: 1px solid var(--color-border);
   border-radius: 14px;
   padding: 2rem 1.5rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: all 0.25s;
   text-decoration: none;
   position: relative;
 }
 
 a.project-card:hover {
-  border-color: var(--color-accent-dim);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background: var(--color-dark);
+  border-color: var(--color-dark);
+  box-shadow: 0 4px 24px rgba(28, 36, 24, 0.2);
   color: inherit;
+}
+
+a.project-card:hover h2 {
+  color: #fff;
+}
+
+a.project-card:hover p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+a.project-card:hover .project-tag {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+a.project-card:hover .project-arrow {
+  color: var(--color-accent);
+  transform: translateX(3px);
 }
 
 .project-tag {
@@ -552,12 +591,7 @@ a.project-card:hover {
   right: 1.5rem;
   font-size: 1.1rem;
   color: var(--color-muted);
-  transition: color 0.2s, transform 0.2s;
-}
-
-a.project-card:hover .project-arrow {
-  color: var(--color-heading);
-  transform: translateX(3px);
+  transition: color 0.25s, transform 0.25s;
 }
 
 /* — Project detail page — */
@@ -640,14 +674,15 @@ a.project-card:hover .project-arrow {
 /* — Active nav link — */
 
 .site-nav a.active {
-  color: var(--color-heading);
+  color: var(--color-accent);
 }
 
 /* — Footer — */
 
 .site-footer {
-  border-top: 1px solid var(--color-border);
-  padding: 2.5rem 0;
+  background: var(--color-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -660,16 +695,16 @@ a.project-card:hover .project-arrow {
 }
 
 .footer-links a {
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-links a:hover {
-  color: var(--color-heading);
+  color: var(--color-accent);
 }
 
 .copyright {
   font-size: 0.75rem;
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* — Scroll animations — */
@@ -755,10 +790,20 @@ a.project-card:hover .project-arrow {
 /* — Print — */
 
 @media print {
-  .site-header { position: static; border: none; }
+  .site-header { position: static; background: #fff; color: #000; }
+  .site-header .logo { color: #000; }
+  .site-nav a { color: #333; }
   .btn { border: 1px solid #999; }
   body { font-size: 12pt; background: #fff; }
   .fade-in { opacity: 1; transform: none; }
   .scroll-cue { display: none; }
   .services-summary { background: #fff; }
+  .about-contact { background: #fff; color: #000; }
+  .about-contact .section-heading { color: #000; }
+  .about-text p { color: #333; }
+  .contact-block h3 { color: #000; }
+  .contact-list a { color: #333; }
+  .site-footer { background: #fff; border-top: 1px solid #ccc; }
+  .footer-links a { color: #333; }
+  .copyright { color: #666; }
 }
