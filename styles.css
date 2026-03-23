@@ -103,10 +103,12 @@ section {
 }
 
 .site-header .logo {
-  font-family: 'DM Serif Display', serif;
-  font-size: 1.15rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
   color: var(--color-accent);
-  letter-spacing: -0.01em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .site-nav {
@@ -142,12 +144,12 @@ section {
 }
 
 .hero-text h1 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: 'DM Serif Display', serif;
   font-size: 6.5rem;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--color-heading);
   letter-spacing: 0.06em;
-  line-height: 1.05;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -260,10 +262,10 @@ section {
 
 .section-heading {
   font-family: 'DM Serif Display', serif;
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: var(--color-heading);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
 }
 
 .section-subheading {
@@ -739,7 +741,7 @@ a.project-card:hover .project-arrow {
 
   .hero-text h1 {
     font-size: 3.25rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
   }
 
   .hero-photo {
