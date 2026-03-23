@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Projects — Alyssa Clark</title>
+  <meta name="description" content="Selected projects in impact measurement, strategy, and research by Alyssa Clark.">
+
+  <meta property="og:title" content="Projects — Alyssa Clark">
+  <meta property="og:description" content="Selected projects in impact measurement, strategy, and research.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alyssaclark.org/projects">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Alyssa Clark</a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:me@alyssaclark.org">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ============================================
+         PROJECTS
+         Add, edit, or remove project cards below.
+         Copy a <a class="project-card"> block to add more.
+         ============================================ -->
+    <section class="projects-page">
+      <div class="container">
+        <h1 class="section-heading">Projects</h1>
+        <p class="projects-intro">A selection of work across measurement, strategy, and research.</p>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <a href="projects/strategic-planning.html" class="project-card fade-in">
+            <span class="project-tag">Strategy</span>
+            <h2>Equity-Centered Strategic Planning</h2>
+            <p>Led a 5-year equity-centered strategic planning process for a cradle-to-career collective impact partnership, facilitating alignment across departments and cross-sector partners in the greater Salt Lake region.</p>
+            <span class="project-arrow">&rarr;</span>
+          </a>
+
+          <!-- Project 2 -->
+          <a href="projects/salesforce-data-system.html" class="project-card fade-in">
+            <span class="project-tag">Measurement &amp; Evaluation</span>
+            <h2>Salesforce Data System Build</h2>
+            <p>Designed and implemented a Salesforce database for longitudinal impact tracking, replacing fragmented spreadsheet systems and enabling real-time reporting across 25+ programmes.</p>
+            <span class="project-arrow">&rarr;</span>
+          </a>
+
+          <!-- Project 3 -->
+          <a href="projects/measurement-frameworks.html" class="project-card fade-in">
+            <span class="project-tag">Measurement &amp; Evaluation</span>
+            <h2>Impact Measurement Frameworks</h2>
+            <p>Designed 25+ measurement frameworks using Results Based Accountability, centered on unearthing structural inequities in education, health, and economic systems.</p>
+            <span class="project-arrow">&rarr;</span>
+          </a>
+
+          <!-- Project 4 -->
+          <a href="projects/council-redesign.html" class="project-card fade-in">
+            <span class="project-tag">Strategy</span>
+            <h2>Participatory Governance Redesign</h2>
+            <p>Contributed to a participatory design process that redistributed organisational power toward communities with lived experience, fundamentally restructuring governance systems.</p>
+            <span class="project-arrow">&rarr;</span>
+          </a>
+
+          <!-- Project 5 -->
+          <a href="projects/cross-sector-data-partnership.html" class="project-card fade-in">
+            <span class="project-tag">Research</span>
+            <h2>Cross-Sector Data Sharing Partnership</h2>
+            <p>Led project development for a cross-sector data sharing partnership through the University of Pennsylvania, securing a $50,000 grant for community-centered data governance models.</p>
+            <span class="project-arrow">&rarr;</span>
+          </a>
+
+          <!-- Project 6 -->
+          <a href="projects/nonprofit-corporate-impact.html" class="project-card fade-in">
+            <span class="project-tag">Research</span>
+            <h2>Nonprofit-Corporate Impact Measurement</h2>
+            <p>Independently scoped and delivered a research project at Ashoka developing an impact measurement framework for nonprofit-corporate partnerships.</p>
+            <span class="project-arrow">&rarr;</span>
+          </a>
+
+          <!-- Project 7 -->
+          <a href="projects/social-innovation-programme.html" class="project-card fade-in">
+            <span class="project-tag">Programme Design</span>
+            <h2>Social Innovation Projects Programme</h2>
+            <p>Directed a large-scale experiential learning programme at BYU's Ballard Center, overseeing 200+ students across 30 teams with campus-wide partnerships across 13 colleges.</p>
+            <span class="project-arrow">&rarr;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:me@alyssaclark.org">me@alyssaclark.org</a>
+        <a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="copyright">&copy; 2026 Alyssa Clark</p>
+    </div>
+  </footer>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const els = document.querySelectorAll('.fade-in');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('visible'));
+        return;
+      }
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      els.forEach(el => obs.observe(el));
+    });
+  </script>
+
+</body>
+</html>
