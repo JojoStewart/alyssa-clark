@@ -4,7 +4,7 @@ Personal website for Alyssa Clark, impact consultant based in London.
 
 **Live at [alyssaclark.org](https://alyssaclark.org)**
 
-Plain HTML and CSS. No build step, no frameworks, no dependencies. Self-hosted fonts (GDPR-safe). Hosted on GitHub Pages.
+Plain HTML and CSS. Hosted on GitHub Pages.
 
 ## Stack
 
