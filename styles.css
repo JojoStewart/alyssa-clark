@@ -139,7 +139,7 @@ section {
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr 280px;
-  gap: 3.5rem;
+  gap: 2rem;
   align-items: start;
 }
 
@@ -163,7 +163,7 @@ section {
 
 .hero-text .bio {
   margin-top: 1.75rem;
-  max-width: 540px;
+  max-width: 640px;
 }
 
 .hero-text .bio p {
@@ -416,7 +416,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  align-items: start;
+  align-items: center;
 }
 
 .service-detail-card h3 {
@@ -431,6 +431,7 @@ section {
   font-size: 0.95rem;
   color: var(--color-muted);
   line-height: 1.65;
+  margin-bottom: 1rem;
 }
 
 .service-detail-card ul {
