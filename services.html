@@ -1,1 +1,136 @@
-Helping organizations design rigorous approaches to understand and act on their impact.<br><br>Spanning the strategic questions of what to measure, a theory of change that connects the dots, the technical infrastructure to capture it, and the communications that make data legible and useful for diverse audiences.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Services | Alyssa Clark</title>
+  <meta name="description" content="Impact measurement, strategy, and research services for organisations driving social change.">
+
+  <meta property="og:title" content="Services | Alyssa Clark">
+  <meta property="og:description" content="Measurement & evaluation, strategy & programme design, and applied research.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alyssaclark.org/services">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Alyssa Clark</a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:me@alyssaclark.org">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ============================================
+         SERVICES — FULL DETAIL
+         Edit the descriptions and bullet points below.
+         ============================================ -->
+    <section class="services-page">
+      <div class="container">
+        <h1 class="section-heading">Services</h1>
+        <p class="section-subheading">I work with nonprofits, government, and private sector organisations on measurement, strategy, and research.</p>
+
+        <div class="services-detail-grid">
+
+          <!-- Service 1 -->
+          <div class="service-detail-card fade-in">
+            <div>
+              <span class="project-tag">01</span>
+              <h3>Measurement &amp; Evaluation</h3>
+              <p class="service-desc">Helping organisations design rigorous, equity-centred approaches to understanding their impact, from theory of change through to data systems and reporting.</p>
+            </div>
+            <ul>
+              <li>Design of theory of change, logic models, and results frameworks</li>
+              <li>Quantitative and qualitative data collection and analysis</li>
+              <li>Equity-centred evaluation design focused on structural disparities</li>
+              <li>Data system design and implementation (including Salesforce)</li>
+              <li>Impact reporting and stakeholder communication</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-detail-card fade-in">
+            <div>
+              <span class="project-tag">02</span>
+              <h3>Strategy &amp; Programme Design</h3>
+              <p class="service-desc">Guiding groups through strategic planning, alignment, and governance. Building the conditions for honest conversation and shared direction.</p>
+            </div>
+            <ul>
+              <li>Multi-year strategic planning and facilitation</li>
+              <li>Stakeholder alignment across departments and partnerships</li>
+              <li>Governance and organisational design processes</li>
+              <li>Collective impact strategy and backbone support</li>
+              <li>Workshop and training design and delivery</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-detail-card fade-in">
+            <div>
+              <span class="project-tag">03</span>
+              <h3>Research</h3>
+              <p class="service-desc">Applied research that bridges academic rigour and practical relevance, designed to inform decisions and reach diverse audiences.</p>
+            </div>
+            <ul>
+              <li>Applied research on social impact, human rights, and equity</li>
+              <li>Survey and focus group design and administration</li>
+              <li>Literature reviews and landscape analyses</li>
+              <li>Data visualisation and presentation for diverse audiences</li>
+              <li>Sector publications and conference presentations</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:me@alyssaclark.org">me@alyssaclark.org</a>
+        <a href="https://www.linkedin.com/in/clark-alyssa/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="copyright">&copy; 2026 Alyssa Clark</p>
+    </div>
+  </footer>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const els = document.querySelectorAll('.fade-in');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('visible'));
+        return;
+      }
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      els.forEach(el => obs.observe(el));
+    });
+  </script>
+
+</body>
+</html>
