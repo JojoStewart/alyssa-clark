@@ -329,6 +329,9 @@ section {
   padding: 2rem 1.5rem;
   transition: background 0.2s, box-shadow 0.2s;
   backdrop-filter: blur(4px);
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .service-card:hover {
