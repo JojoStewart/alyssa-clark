@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Alyssa Clark | Yoga</title>
+    <meta
+      name="description"
+      content="Yoga classes focused on intuitive movement, mindfulness, and mind-body connection. Accessible for all levels and body types."
+    />
+
+    <!-- Keep this page out of search indexes -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Alyssa Clark | Yoga" />
+    <meta
+      property="og:description"
+      content="Meditation-focused yoga classes accessible for all levels and body types."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alyssaclark.org/yoga" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧘</text></svg>"
+    />
+
+    <link rel="stylesheet" href="../styles.css" />
+
+    <style>
+      /* Yoga page overrides — same palette, different layout */
+
+      .yoga-header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 3.75rem;
+      }
+
+      .yoga-header .logo {
+        font-family: "DM Sans", system-ui, sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--color-accent);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .yoga-nav {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .yoga-nav a {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.01em;
+        transition: color 0.2s;
+      }
+
+      .yoga-nav a:hover {
+        color: #fff;
+      }
+
+      /* Hero — full-width photo with text overlay */
+
+      .yoga-hero {
+        position: relative;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: var(--color-dark);
+        padding: 6rem 0;
+      }
+
+      .yoga-hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .yoga-hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+        opacity: 0.45;
+      }
+
+      .yoga-hero .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .yoga-hero h1 {
+        font-family: "DM Serif Display", serif;
+        font-size: 5.5rem;
+        font-weight: 400;
+        color: #fff;
+        letter-spacing: 0.04em;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      .yoga-hero h1 .highlight {
+        background: var(--color-accent);
+        color: var(--color-dark);
+        padding: 0 0.15em;
+        margin: 0 -0.15em;
+      }
+
+      .yoga-hero .tagline {
+        font-size: 1.15rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 1.25rem;
+        letter-spacing: 0.02em;
+      }
+
+      .yoga-hero .hero-ctas {
+        margin-top: 2.5rem;
+      }
+
+      .yoga-hero .btn-primary {
+        background: var(--color-accent);
+        color: var(--color-dark);
+        border-color: var(--color-accent);
+      }
+
+      .yoga-hero .btn-primary:hover {
+        background: #fff;
+        border-color: #fff;
+      }
+
+      .yoga-hero .btn-outline {
+        color: rgba(255, 255, 255, 0.85);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .yoga-hero .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.6);
+        color: #fff;
+      }
+
+      /* Philosophy section */
+
+      .yoga-philosophy {
+        padding: 5rem 0;
+      }
+
+      .philosophy-inner {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 3.5rem;
+        align-items: center;
+      }
+
+      .philosophy-text {
+        max-width: 580px;
+      }
+
+      .philosophy-text blockquote {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.5rem;
+        color: var(--color-heading);
+        line-height: 1.45;
+        border-left: 3px solid var(--color-accent);
+        padding-left: 1.5rem;
+        margin-bottom: 1.75rem;
+      }
+
+      .philosophy-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--color-text);
+        margin-bottom: 0.85rem;
+      }
+
+      .philosophy-photo {
+        width: 320px;
+        height: 420px;
+        border-radius: 12px;
+        overflow: hidden;
+        background: var(--color-surface);
+        flex-shrink: 0;
+      }
+
+      .philosophy-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 15%;
+      }
+
+      /* Expertise pills */
+
+      .expertise-section {
+        background: var(--color-accent);
+        padding: 4rem 0;
+      }
+
+      .expertise-section .section-heading {
+        color: var(--color-heading);
+      }
+
+      .expertise-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 2rem;
+      }
+
+      .expertise-pill {
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        border-radius: 50px;
+        padding: 0.7rem 1.4rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--color-heading);
+        backdrop-filter: blur(4px);
+      }
+
+      /* Teaching experience */
+
+      .teaching-section {
+        padding: 5rem 0;
+      }
+
+      .teaching-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+      }
+
+      .teaching-card {
+        background: var(--color-surface);
+        border-radius: 14px;
+        padding: 2rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1.5rem;
+        align-items: start;
+      }
+
+      .teaching-card h3 {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.3rem;
+        color: var(--color-heading);
+        margin-bottom: 0.25rem;
+        line-height: 1.25;
+      }
+
+      .teaching-card .teaching-venue {
+        font-size: 0.85rem;
+        color: var(--color-muted);
+        margin-bottom: 0.85rem;
+      }
+
+      .teaching-card .teaching-dates {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--color-muted);
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        padding-top: 0.3rem;
+      }
+
+      .teaching-card ul {
+        list-style: none;
+      }
+
+      .teaching-card li {
+        position: relative;
+        padding-left: 1.1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        line-height: 1.55;
+        color: var(--color-text);
+      }
+
+      .teaching-card li::before {
+        content: "–";
+        position: absolute;
+        left: 0;
+        color: var(--color-accent-dim);
+        font-weight: 700;
+      }
+
+      /* Training section */
+
+      .training-section {
+        background: var(--color-dark);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 5rem 0;
+      }
+
+      .training-section .section-heading {
+        color: #fff;
+      }
+
+      .training-inner {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 3.5rem;
+        margin-top: 2rem;
+      }
+
+      .training-text p {
+        margin-bottom: 0.85rem;
+        line-height: 1.7;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .training-text ul {
+        list-style: none;
+        margin-top: 1.25rem;
+      }
+
+      .training-text li {
+        position: relative;
+        padding-left: 1.1rem;
+        margin-bottom: 0.6rem;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .training-text li::before {
+        content: "–";
+        position: absolute;
+        left: 0;
+        color: var(--color-accent);
+        font-weight: 700;
+      }
+
+      .training-detail {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 2rem 1.75rem;
+        align-self: start;
+      }
+
+      .training-detail h3 {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.3rem;
+        color: var(--color-accent);
+        margin-bottom: 0.5rem;
+      }
+
+      .training-detail .training-meta {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 1rem;
+      }
+
+      .training-detail p {
+        font-size: 0.9rem;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Contact section */
+
+      .yoga-contact {
+        padding: 5rem 0;
+        text-align: center;
+      }
+
+      .yoga-contact .section-heading {
+        margin-bottom: 1rem;
+      }
+
+      .yoga-contact p {
+        color: var(--color-muted);
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+      }
+
+      .yoga-contact .contact-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      /* Yoga footer */
+
+      .yoga-footer {
+        background: var(--color-dark);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 2rem 0;
+        text-align: center;
+      }
+
+      .yoga-footer .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .yoga-footer .footer-links a {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .yoga-footer .footer-links a:hover {
+        color: var(--color-accent);
+      }
+
+      .yoga-footer .copyright {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      /* Responsive */
+
+      @media (max-width: 768px) {
+        .yoga-hero {
+          min-height: 60vh;
+          padding: 4rem 0;
+        }
+
+        .yoga-hero h1 {
+          font-size: 3rem;
+        }
+
+        .philosophy-inner {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .philosophy-photo {
+          width: 100%;
+          height: 300px;
+          order: -1;
+        }
+
+        .training-inner {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .teaching-card {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+        }
+
+        .teaching-card .teaching-dates {
+          order: -1;
+        }
+
+        .yoga-nav {
+          gap: 1.25rem;
+        }
+
+        .yoga-nav a {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header yoga-header">
+      <div class="container">
+        <a href="/yoga/" class="logo">Alyssa Clark Yoga</a>
+        <nav>
+          <ul class="yoga-nav">
+            <li><a href="#philosophy">About</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="yoga-hero">
+        <div class="yoga-hero-bg">
+          <img src="images/yoga-class.png" alt="Alyssa teaching a yoga class" />
+        </div>
+        <div class="container">
+          <h1>
+            Yoga with
+            <span class="highlight">Alyssa</span>
+          </h1>
+          <p class="tagline">Intuitive Movement · Mindfulness · Mind-Body Connection</p>
+          <div class="hero-ctas">
+            <a href="mailto:yoga@alyssaclark.org" class="btn btn-primary">Get in touch</a>
+            <a href="#teaching" class="btn btn-outline">See experience</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Philosophy -->
+      <section id="philosophy" class="yoga-philosophy fade-in">
+        <div class="container">
+          <div class="philosophy-inner">
+            <div class="philosophy-text">
+              <h2 class="section-heading">Approach</h2>
+              <br />
+              <blockquote>Yoga is a tool for meditative, intuitive, mind-body experiences.</blockquote>
+              <p>
+                As an instructor, my goal is to create a container for students to have an integrated experience,
+                individually and as a community. My teaching focuses on intuitive movement, mindfulness, and mind-body
+                connection, culminating in an extended savasana.
+              </p>
+              <p>
+                My classes are meditation focused and are accessible for all levels of experience and body types by
+                providing options to accommodate each individual.
+              </p>
+            </div>
+            <div class="philosophy-photo">
+              <img src="images/yoga-portrait.png" alt="Alyssa in a yoga pose" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expertise -->
+      <section class="expertise-section fade-in">
+        <div class="container">
+          <h2 class="section-heading">Expertise</h2>
+          <div class="expertise-grid">
+            <span class="expertise-pill">Intuitive Movement</span>
+            <span class="expertise-pill">Meditation</span>
+            <span class="expertise-pill">Mind-Body Integration</span>
+            <span class="expertise-pill">Joint Protection</span>
+            <span class="expertise-pill">All-Level Accessibility</span>
+            <span class="expertise-pill">All Body Type Accessibility</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Teaching Experience -->
+      <section id="teaching" class="teaching-section">
+        <div class="container">
+          <h2 class="section-heading">Teaching Experience</h2>
+          <p class="section-subheading">Group classes, private sessions, and workplace wellness.</p>
+
+          <div class="teaching-grid fade-in-stagger">
+            <div class="teaching-card fade-in">
+              <div>
+                <h3>LSE Student Life Yoga Instructor</h3>
+                <p class="teaching-venue">London School of Economics · London, UK</p>
+                <ul>
+                  <li>Led classes for department-specific student groups</li>
+                  <li>Facilitated sessions during wellness weeks with focus on mental health</li>
+                  <li>Class sizes ranged from small groups to 20–25 students</li>
+                </ul>
+              </div>
+              <span class="teaching-dates">Jan 2025 – Present</span>
+            </div>
+
+            <div class="teaching-card fade-in">
+              <div>
+                <h3>EoS Group Fitness Instructor</h3>
+                <p class="teaching-venue">EoS Fitness · Utah, USA</p>
+                <ul>
+                  <li>Led twice weekly yoga classes for 25–30 students per session</li>
+                  <li>Created a motivational and empowering environment for all participants</li>
+                  <li>Customized classes based on participant input and abilities</li>
+                </ul>
+              </div>
+              <span class="teaching-dates">Jan 2023 – Sep 2024</span>
+            </div>
+
+            <div class="teaching-card fade-in">
+              <div>
+                <h3>Private Yoga Instructor</h3>
+                <p class="teaching-venue">Utah, USA</p>
+                <ul>
+                  <li>Designed and led group and individual-specific classes</li>
+                  <li>Youth treatment centers with focus on interaction and engagement</li>
+                  <li>Corporate workplaces emphasizing stretching and meditation</li>
+                  <li>Custom gatherings: bachelorette parties, birthday celebrations, retreats</li>
+                </ul>
+              </div>
+              <span class="teaching-dates">Sep 2022 – Sep 2024</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Training -->
+      <section class="training-section fade-in">
+        <div class="container">
+          <h2 class="section-heading">Training</h2>
+
+          <div class="training-inner">
+            <div class="training-text">
+              <p>
+                I trained under a unique tanhā yoga philosophy focused on intuitive movement and meditation, learning to
+                choreograph creative and intelligent sequences that honour each student's body.
+              </p>
+              <ul>
+                <li>Unique tanhā yoga philosophy focused on intuitive movement and meditation</li>
+                <li>Practiced choreographing creative, intelligent sequences</li>
+                <li>Learned how to cue yoga poses informed to protect joints (especially knees and spine)</li>
+                <li>Expanded knowledge of yoga philosophies, ethics, and lifestyle practices</li>
+              </ul>
+            </div>
+
+            <div class="training-detail">
+              <h3>200-Hour YTT</h3>
+              <p class="training-meta">The Yoga Underground · Utah, USA · September 2022</p>
+              <p>
+                Comprehensive yoga teacher training certification covering philosophy, anatomy, sequencing, cuing, and
+                the ethics of teaching.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="yoga-contact fade-in">
+        <div class="container">
+          <h2 class="section-heading">Get in Touch</h2>
+          <p>Interested in private sessions, group classes, or workplace wellness?</p>
+          <div class="contact-actions">
+            <a href="mailto:yoga@alyssaclark.org" class="btn btn-primary">yoga@alyssaclark.org</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="yoga-footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="mailto:yoga@alyssaclark.org">yoga@alyssaclark.org</a>
+        </div>
+        <p class="copyright">&copy; 2026 Alyssa Clark</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const els = document.querySelectorAll(".fade-in");
+        if (!("IntersectionObserver" in window)) {
+          els.forEach((el) => el.classList.add("visible"));
+          return;
+        }
+        const obs = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("visible");
+                obs.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        els.forEach((el) => obs.observe(el));
+      });
+    </script>
+  </body>
+</html>
